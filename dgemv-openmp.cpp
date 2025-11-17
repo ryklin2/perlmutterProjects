@@ -1,6 +1,9 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <omp.h> 
+#include <time.h>
+#include <iostream>
+#include <stdio.h>
 void dgemv(int M, int N, double* A, double* x, double* y) {
     
 

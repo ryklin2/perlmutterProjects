@@ -5,13 +5,17 @@
 #include <iostream>
 #include <stdio.h>
 
-//lets keep the same loop structure
+
 void sum(int N, int A[], int Y[]) {
     #pragma omp parallel for
     for (int i = 0; i < N; i++) {
+        
         Y[i] = 0;
-        for (int j = 0; j <= i; j++) {
-            Y[i] += A[j];
+
+        for (int j = 0; j < N; j++) {
+            
+
+            Y[i] += A[i * N + j];
         }
     }
 }
